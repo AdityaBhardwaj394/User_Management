@@ -10,9 +10,9 @@ require('./DB/conn.js');
 
 // Middleware
 app.use(cors());
+cors({credential:true,origin:'*'})
 app.use(express.json());
 app.use(cookieParser());
-
 //Routes
 app.use('/api',apiRoutes);
 
