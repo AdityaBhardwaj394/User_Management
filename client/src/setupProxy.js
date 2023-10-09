@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
 
-  let targetURL = 'http://localhost:4000';
+  let targetURL = 'https://user-service-gnz6.onrender.com/';
 
 
   app.use(
