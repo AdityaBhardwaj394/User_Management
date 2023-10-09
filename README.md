@@ -1,0 +1,28 @@
+# User_Management
+To run App locally go create folder user-management
+go to client 
+enter npm install on command line
+and enter npm start to run
+go to server 
+and enter npm start to run
+enter npm intall on command line
+
+Now, we have to sign up else cannot enter
+enter details
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/251f1078-0ade-4664-ba36-e79dddee1703)
+
+enter login details.
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/a6476f5c-02de-4c6e-91f0-4f10865d488e)
+
+add data
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/1dbbacde-8d82-49fb-911a-2c98a522a075)
+sort the data
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/a4151afb-b599-43c9-8f7a-4e3116d172ce)
+update the data
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/13c9741a-1102-4e2e-9d30-1bde99047c36)
+also can delete the data 
+and logout after that
+
+
+
+
