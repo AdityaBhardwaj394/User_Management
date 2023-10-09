@@ -9,6 +9,7 @@ const app = express();
 require('./DB/conn.js');
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
