@@ -15,12 +15,13 @@ const taskSchema = new mongoose.Schema({
     default: false,
   },
   dueDate: {
-    type: Date,
+    type: String,
+    trim:true,
   },
   priority: {
     type: String,
-    enum: ['high', 'medium', 'low'],
-    default: 'medium',
+    enum: ['Admin', 'Normal'],
+    default: 'Normal',
   },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,

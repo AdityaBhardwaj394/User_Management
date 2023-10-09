@@ -107,11 +107,11 @@ function TodoApp({showCustomNotification}) {
     }
   }
 
-  async function updateTodo(id, title, priority) {
+  async function updateTodo(id, title,description,completed,dueDate,priority) {
     try {
       const response = await fetch(`/api/tasks/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({title, priority}),
+        body: JSON.stringify({title,description,completed,dueDate,priority}),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -169,25 +169,25 @@ function TodoApp({showCustomNotification}) {
         ) : (
           <p className="loading">Loading user data...</p>
         )}
-        <h1>Task List</h1>
+        <h1>User-List</h1>
 
         <TodoForm addTodo={addTodo} />
 
         <div>
           <span>
-        <label>Filter by Priority: </label>
+        <label>Filter by UserType: </label>
         <select
           value={priorityFilter}
           onChange={(e) => setPriorityFilter(e.target.value)}
         >
           <option value="all">All</option>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
+          <option value="Admin">Admin</option>
+          <option value="Normal">Normal User</option>
+        
         </select>
         </span>
         <span>
-        <label>Tasks: </label>
+        {/* <label>Tasks: </label>
         <select
         value={completedFilter}
         onChange={(e) => setCompletedFilter(e.target.value)}
@@ -195,7 +195,7 @@ function TodoApp({showCustomNotification}) {
         <option value="all">All</option>
         <option value="true">Completed</option>
         <option value="false">Not Completed</option>
-      </select>
+      </select> */}
       </span>
       <span>
       <select
@@ -203,8 +203,11 @@ function TodoApp({showCustomNotification}) {
       onChange={(e) => setSortBy(e.target.value)} 
       > 
     <option value="none">Sort by</option>
-    <option value="dueDateAsc">Due Date (Ascending)</option>
-    <option value="dueDateDesc">Due Date (Descending)</option>
+    <option value="dueDateAsc">Last Modified (Ascending)</option>
+    <option value="dueDateDesc">Last MOdified (Descending)</option>
+    <option value="titleAsc">A-Z</option>
+    <option value="titleDesc">Z-A</option>
+    
     </select>
     </span>
       </div>

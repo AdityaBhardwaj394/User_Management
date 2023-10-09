@@ -54,6 +54,23 @@ export default function RegisterPage({showCustomNotification}) {
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
           />
+          <div style={{ display:'flex'}}>
+      <label htmlFor="gender"  style={{ marginLeft:'4px',paddingBottom:'0px',paddingRight: '10px',paddingLeft:'0px' }}> Gender:</label>
+      <select id="gender" name="gender" style={{ marginBottom:'10px'}} >
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      </div>
+      {/* <p>Selected Gender: {selectedGender}</p> */}
+          
+          
+          <input
+            type='number'
+            placeholder="Age"
+           
+          />
           <button>Register</button>
         </form>
       )}

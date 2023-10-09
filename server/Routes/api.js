@@ -151,11 +151,17 @@ router.put('/tasks/:taskId',authenticate, async (req, res) => {
     const taskData = {
       title: req.body.title,
       priority: req.body.priority,
-      completed:req.body.completed
+      completed:req.body.completed,
+      dueDate:req.body.dueDate,
+      description:req.body.description,
+      createdAt:Date.now(),
+
     };
+    
 
     const updatedTask = await Task.findByIdAndUpdate(taskId, taskData, { new: true });
     if (!updatedTask) {
+      console.log(taskData);
       return res.status(404).json({ error: 'Failed to update' });
     }else{
       res.json({ message: 'Task updated successfully !' });

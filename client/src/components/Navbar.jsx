@@ -29,7 +29,7 @@ function Navbar({showCustomNotification}) {
   return (
     <nav>
       <div className="navbar-container">
-        <h1>taskEase</h1>
+        <h1>UserHub  ❤</h1>
         <ul>
           <li>
             <NavLink to="/" exact activeClassName="active-link">

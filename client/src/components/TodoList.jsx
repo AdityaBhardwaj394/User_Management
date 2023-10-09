@@ -47,6 +47,14 @@ if (sortBy === "dueDateAsc") {
     }
     return 0; // both are null or undefined, no change in order
   });
+}else if (sortBy === 'titleAsc') {
+  sortedTodos = sortedTodos.sort((a, b) => {
+    return a.title.localeCompare(b.title);
+  });
+} else if (sortBy === 'titleDesc') {
+  sortedTodos = sortedTodos.sort((a, b) => {
+    return b.title.localeCompare(a.title);
+  });
 }
 
 

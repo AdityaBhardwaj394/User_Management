@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import ImageWithProps from './image';
 
 function TodoItem({ todo, deleteTodo, toggleComplete, updateTodo, fetchTodos }) {
     const [title, setTitle] = useState(todo.title);
+    const [description,setdescription] = useState(todo.description);
+    const [dueDate,setdueDate] = useState(todo.dueDate);
     const [priority, setPriority] = useState(todo.priority);
     const [isEditing, setIsEditing] = useState(false);
+    const [completed,setcompleted]=useState(false)
   
     const handleUpdateClick = () => {
-      updateTodo(todo._id, title, priority);
+      updateTodo(todo._id, title,description,completed,dueDate, priority);
       setIsEditing(false);
       fetchTodos();
     };
@@ -23,10 +27,11 @@ function TodoItem({ todo, deleteTodo, toggleComplete, updateTodo, fetchTodos }) 
           <strong>{todo.title}</strong>
         </span>
         <div>
-          <p>Description: {todo.description}</p>
-          <p>Due Date: {new Date(todo.dueDate).toLocaleString()}</p>
-          <p>Created At: {new Date(todo.createdAt).toLocaleString()}</p>
-          <p>Priority: {todo.priority}</p>
+          <ImageWithProps height="50px" width="50px"/>
+          <p>Email: {todo.description}</p>
+          <p>Mob no: {todo.dueDate}</p>
+          <p>Last Modified: {new Date(todo.createdAt).toLocaleString()}</p>
+          <p>UserType: {todo.priority}</p>
         </div>
         {isEditing ? (
           <div>
@@ -36,13 +41,25 @@ function TodoItem({ todo, deleteTodo, toggleComplete, updateTodo, fetchTodos }) 
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
+            <input
+              type="text"
+              placeholder="Updated Email"
+              value={description}
+              onChange={(e) => setdescription(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Updated mob"
+              value={dueDate}
+              onChange={(e) => setdueDate(e.target.value)}
+            />
             <select
               value={priority}
               onChange={(e) => setPriority(e.target.value)}
             >
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
+              <option value="DBA">DBA</option>
+              <option value="Normal">Normal User</option>
+              {/* <option value="low"></option> */}
             </select>
             <button className="update-button" onClick={handleUpdateClick}>
               Update
@@ -58,14 +75,8 @@ function TodoItem({ todo, deleteTodo, toggleComplete, updateTodo, fetchTodos }) 
             </button>
           </>
         )}
-        <button
-          className={`complete-button ${
-            todo.completed ? 'unmark-button' : 'mark-button'
-          }`}
-          onClick={() => toggleComplete(todo._id)}
-        >
-          {todo.completed ? 'Unmark Completed' : 'Mark Completed'}
-        </button>
+
+    
       </li>
     );
   }

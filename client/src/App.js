@@ -46,6 +46,7 @@ const App = () => {
         <Route exact path="/login" element={<Login showCustomNotification={showCustomNotification} />} />
         <Route exact path="/signup" element={<Signup showCustomNotification={showCustomNotification} />} />
       </Routes>
+      
     </>
   );
 };
