@@ -12,7 +12,7 @@ require('./DB/conn.js');
 // Middleware
 // Enable CORS for a specific origin
 const corsOptions = {
-  origin: 'https://user-client.onrender.com',
+  origin: '*',
   credentials: true, // Allow credentials (cookies, etc.)
 };
 
