@@ -4,7 +4,7 @@ In this i used tech stack
 :Node js
 :Express js
 :MongoDB
-Some bit of CSS 😎
+A bit of CSS 😎
 for authentication bycrypt for hashing and jwtwebtoken for authentication management 
 To run App locally go create folder user-management
 go to client 
