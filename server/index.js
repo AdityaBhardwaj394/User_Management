@@ -10,7 +10,13 @@ const cors=require('cors')
 require('./DB/conn.js');
 
 // Middleware
-app.use(cors());
+// Enable CORS for a specific origin
+const corsOptions = {
+  origin: 'https://user-client.onrender.com',
+  credentials: true, // Allow credentials (cookies, etc.)
+};
+
+app.use(cors(corsOptions));
 cors({credentials:true,origin:'*'});
 app.use(express.json());
 app.use(cookieParser());
