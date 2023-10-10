@@ -67,10 +67,28 @@ export default function RegisterPage({showCustomNotification}) {
           
           
           <input
-            type='number'
-            placeholder="Age"
+            type='text'
+            placeholder="how did you hear about this"
            
           />
+                <div style={{ display:'flex'}}>
+      <label htmlFor="city"  style={{ marginLeft:'4px',paddingBottom:'0px',paddingRight: '10px',paddingLeft:'0px' }}> City:</label>
+      <select id="city" name="city" style={{ marginLeft:'8px', marginBottom:'10px'}} >
+        <option value="">Select</option>
+        <option value="male">Mumbai</option>
+        <option value="female">Pune</option>
+        <option value="other">Ahmedabad</option>
+      </select>
+      </div>
+      <div style={{ display:'flex'}}>
+      <label htmlFor="state"  style={{ marginLeft:'4px',paddingBottom:'0px',paddingRight: '10px',paddingLeft:'0px' }}> State:</label>
+      <select id="state" name="state" style={{ marginBottom:'10px'}} >
+        <option value="">Select</option>
+        <option value="male">Gujarat</option>
+        <option value="female">Maharashtra</option>
+        <option value="other">Karnataka</option>
+      </select>
+      </div>
           <button>Register</button>
         </form>
       )}
