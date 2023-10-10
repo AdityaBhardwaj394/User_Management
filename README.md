@@ -16,7 +16,7 @@ enter npm intall on command line
 
 Now, we have to sign up else cannot enter
 enter details
-![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/251f1078-0ade-4664-ba36-e79dddee1703)
+![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/7425a277-4b9e-4e96-b99c-74dd2ef88034)
 
 enter login details.
 ![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/a6476f5c-02de-4c6e-91f0-4f10865d488e)
