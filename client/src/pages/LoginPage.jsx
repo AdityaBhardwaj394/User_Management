@@ -17,7 +17,7 @@ export default function LoginPage({showCustomNotification}) {
     setIsLoading(true); 
 
     try {
-      const response = await fetch('https://user-service-gnz6.onrender.com/api/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },

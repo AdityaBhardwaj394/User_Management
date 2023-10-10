@@ -9,7 +9,7 @@ function Navbar({showCustomNotification}) {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("https://user-service-gnz6.onrender.com/api/logout", {
+      const response = await fetch("/api/logout", {
         method: "POST",
       });
       const { error, message } = await response.json();

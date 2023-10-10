@@ -6,18 +6,12 @@ const PORT = process.env.PORT;
 const cookieParser = require('cookie-parser');
 const app = express();
 // db connection
-const cors=require('cors')
+// const cors=require('cors')
 require('./DB/conn.js');
 
 // Middleware
-// Enable CORS for a specific origin
-const corsOptions = {
-  origin: '*',
-  credentials: true, // Allow credentials (cookies, etc.)
-};
-
-app.use(cors(corsOptions));
-cors({credentials:true,origin:'*'});
+// app.use(cors());
+// cors({credentials:true,origin:'*'});
 app.use(express.json());
 app.use(cookieParser());
 //Routes

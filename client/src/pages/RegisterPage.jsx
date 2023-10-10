@@ -13,7 +13,7 @@ export default function RegisterPage({showCustomNotification}) {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://user-service-gnz6.onrender.com/api/register', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },

@@ -26,7 +26,7 @@ function TodoApp({showCustomNotification}) {
 
   async function fetchUserData() {
     try {
-      const response = await fetch('https://user-service-gnz6.onrender.com/api/userdata');
+      const response = await fetch('/api/userdata');
       if (!response.ok) {
         return;
       }else{
@@ -41,7 +41,7 @@ function TodoApp({showCustomNotification}) {
 
   async function fetchTodos() {
     try {
-      const response = await fetch('https://user-service-gnz6.onrender.com/api/tasks');
+      const response = await fetch('/api/tasks');
       const data= await response.json();
       const{error} = data;
       if (!response.ok) {
@@ -58,7 +58,7 @@ function TodoApp({showCustomNotification}) {
 
   async function addTodo(newTodo) {
     try {
-      const response = await fetch('https://user-service-gnz6.onrender.com/api/tasks', {
+      const response = await fetch('/api/tasks', {
         method: 'POST',
         body: JSON.stringify(newTodo),
         headers: {
@@ -85,7 +85,7 @@ function TodoApp({showCustomNotification}) {
 
   async function deleteTodo(id) {
     try {
-      const response = await fetch(`https://user-service-gnz6.onrender.com/api/tasks/${id}`, {
+      const response = await fetch(`/api/tasks/${id}`, {
         method: 'DELETE',
       });
       const data = await response.json();
@@ -109,7 +109,7 @@ function TodoApp({showCustomNotification}) {
 
   async function updateTodo(id, title,description,completed,dueDate,priority) {
     try {
-      const response = await fetch(`https://user-service-gnz6.onrender.com/api/tasks/${id}`, {
+      const response = await fetch(`/api/tasks/${id}`, {
         method: 'PUT',
         body: JSON.stringify({title,description,completed,dueDate,priority}),
         headers: {
@@ -136,7 +136,7 @@ function TodoApp({showCustomNotification}) {
       const todoToToggle = todos.find((todo) => todo._id === id);
       todoToToggle.completed = !todoToToggle.completed;
       console.log(todoToToggle);
-      const response = await fetch(`https://user-service-gnz6.onrender.com/api/tasks/${id}`, {
+      const response = await fetch(`/api/tasks/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
