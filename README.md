@@ -1,4 +1,11 @@
 # User_Management
+In this i used tech stack 
+:React js
+:Node js
+:Express js
+:MongoDB
+Some bit of CSS 😎
+for authentication bycrypt for hashing and jwtwebtoken for authentication management 
 To run App locally go create folder user-management
 go to client 
 enter npm install on command line
