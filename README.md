@@ -14,8 +14,8 @@ go to server
 and enter npm start to run
 enter npm intall on command line
 
-Now, we have to sign up else cannot enter
-enter details
+Now, we have to sign up else cannot logged in
+enter details in following
 ![image](https://github.com/AdityaBhardwaj394/User_Management/assets/103112612/7425a277-4b9e-4e96-b99c-74dd2ef88034)
 
 enter login details.
