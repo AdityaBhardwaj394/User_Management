@@ -6,11 +6,12 @@ const PORT = process.env.PORT;
 const cookieParser = require('cookie-parser');
 const app = express();
 // db connection
+const cors=require('cors')
 require('./DB/conn.js');
 
 // Middleware
 app.use(cors());
-app.options('*',cors());
+cors({credentials:true,origin:'*'});
 app.use(express.json());
 app.use(cookieParser());
 //Routes
